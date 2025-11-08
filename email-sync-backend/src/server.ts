@@ -52,7 +52,7 @@ class EmailSyncServer {
   res.json({ message: "Email Sync Backend is running ✅" });
 });
 
-    this.app.use(express.static('public'));
+    // this.app.use(express.static('public'));
   }
 
   private setupRoutes(): void {
@@ -149,5 +149,6 @@ process.on('SIGINT', async () => {
   process.exit(0);
 
 });
+
 
 
