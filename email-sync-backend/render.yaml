@@ -1,0 +1,40 @@
+services:
+  - type: web
+    name: email-sync-backend
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: ELASTICSEARCH_URL
+        value: http://localhost:9200
+      - key: IMAP1_USER
+        sync: false
+      - key: IMAP1_PASSWORD
+        sync: false
+      - key: IMAP1_HOST
+        value: imap.gmail.com
+      - key: IMAP1_PORT
+        value: 993
+      - key: IMAP2_USER
+        sync: false
+      - key: IMAP2_PASSWORD
+        sync: false
+      - key: IMAP2_HOST
+        value: imap.gmail.com
+      - key: IMAP2_PORT
+        value: 993
+      - key: SLACK_WEBHOOK_URL
+        sync: false
+      - key: WEBHOOK_URL
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: PRODUCT_CONTEXT
+        value: "I am applying for a Backend Engineering position."
