@@ -96,7 +96,7 @@ class EmailSyncServer {
     try {
       // Initialize elastic search
       console.log('Initializing Elasticsearch...');
-      await this.elasticsearchService.initialize();
+      // await this.elasticsearchService.initialize();
       console.log('Elasticsearch initialized');
 
     
@@ -145,3 +145,4 @@ process.on('SIGINT', async () => {
   process.exit(0);
 
 });
+
