@@ -48,11 +48,13 @@ class EmailSyncServer {
     this.app.use(bodyParser.urlencoded({ extended: true }));
 
     //serve index.html
-    this.app.get("/", (req, res) => {
-  res.json({ message: "Email Sync Backend is running ✅" });
-});
+    // Serve static files
+  this.app.use(express.static(path.join(__dirname, "public")));
 
-    // this.app.use(express.static('public'));
+  // Catch-all route must be LAST
+  this.app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "public", "index.html"));
+  });
   }
 
   private setupRoutes(): void {
@@ -149,6 +151,7 @@ process.on('SIGINT', async () => {
   process.exit(0);
 
 });
+
 
 
 
