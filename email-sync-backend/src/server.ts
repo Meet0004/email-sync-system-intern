@@ -48,6 +48,10 @@ class EmailSyncServer {
     this.app.use(bodyParser.urlencoded({ extended: true }));
 
     //serve index.html
+    this.app.get("/", (req, res) => {
+  res.json({ message: "Email Sync Backend is running ✅" });
+});
+
     this.app.use(express.static('public'));
   }
 
@@ -145,4 +149,5 @@ process.on('SIGINT', async () => {
   process.exit(0);
 
 });
+
 
