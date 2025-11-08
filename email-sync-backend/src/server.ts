@@ -40,7 +40,7 @@ class EmailSyncServer {
     origin: [
       'http://localhost:3000',
       'http://localhost:5173',
-      'https://your-app-name.vercel.app', // Frontend deployment link
+      'https://email-sync-system-intern.vercel.app/', // Frontend deployment link
     ],
     credentials: true
   }));
@@ -143,4 +143,5 @@ process.on('SIGINT', async () => {
   console.log('SIGINT received, shutting down gracefully...');
   await server.stop();
   process.exit(0);
+
 });
