@@ -51,11 +51,10 @@ class EmailSyncServer {
     //serve index.html
     // Serve static files
   this.app.use(express.static(path.join(__dirname, "public")));
+this.app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
+});
 
-  // Catch-all route must be LAST
-  this.app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "public", "index.html"));
-  });
   }
 
   private setupRoutes(): void {
@@ -152,6 +151,7 @@ process.on('SIGINT', async () => {
   process.exit(0);
 
 });
+
 
 
 
