@@ -10,6 +10,7 @@ import { RAGService } from './services/rag.service';
 import { EmailController } from './controllers/email.controller';
 import { createRoutes } from './routes';
 import { Email } from './types';
+import * as path from "path";
 
 class EmailSyncServer {
   private app: express.Application;
@@ -151,6 +152,7 @@ process.on('SIGINT', async () => {
   process.exit(0);
 
 });
+
 
 
 
