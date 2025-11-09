@@ -4,7 +4,7 @@
   "description": "Real-time email synchronization with AI categorization",
   "main": "dist/server.js",
   "scripts": {
-"build": "tsc && cpy src/public/**/* dist/public --parents",
+    "build": "tsc",
     "start": "node dist/server.js",
     "dev": "ts-node src/server.ts",
     "docker:up": "docker-compose up -d",
@@ -34,4 +34,3 @@
     "typescript": "^5.3.3"
   }
 }
-
