@@ -331,8 +331,8 @@
     <script>
         let allEmails = [];
 const API_BASE_URL = window.location.hostname === 'localhost' 
-    ? 'http://localhost:3000'  // Local development
-    : 'https://email-sync-system-intern-p1es.onrender.com';  // Production
+    ? 'http://localhost:3000'  
+    : `${process.env.frontendurl}`;
         async function loadStatistics() {
             try {
             
@@ -505,5 +505,4 @@ const API_BASE_URL = window.location.hostname === 'localhost'
         });
     </script>
 </body>
-
 </html>
