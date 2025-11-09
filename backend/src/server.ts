@@ -41,9 +41,9 @@ class EmailSyncServer {
     this.app.use(bodyParser.urlencoded({ extended: true }));
 
     //serve index.html
-    this.app.use(express.static(path.join(__dirname, '../frontend/dist/frontend')));
+    this.app.use(express.static(path.join(__dirname, '../dist/frontend')));
 	this.app.get('/', (req, res) => {
-	  res.sendFile(path.join(__dirname, '../frontend/dist/frontend/index.html'));
+	  res.sendFile(path.join(__dirname, '../dist/frontend/index.html'));
 	});
   }
 
@@ -139,4 +139,5 @@ process.on('SIGINT', async () => {
   console.log('SIGINT received, shutting down gracefully...');
   await server.stop();
   process.exit(0);
+
 });
