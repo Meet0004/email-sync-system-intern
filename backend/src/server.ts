@@ -37,7 +37,7 @@ class EmailSyncServer {
 
   private setupMiddleware(): void {
     this.app.use(cors({
-  origin: ['http://localhost:8080', 'https://email-sync-system-intern.vercel.app/'],
+  origin: ['*','http://localhost:8080', 'https://email-sync-system-intern.vercel.app/'],
   credentials: true
 }));
     this.app.use(bodyParser.json());
@@ -145,3 +145,4 @@ process.on('SIGINT', async () => {
   process.exit(0);
 
 });
+
