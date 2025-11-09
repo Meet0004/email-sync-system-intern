@@ -330,12 +330,12 @@
 
     <script>
         let allEmails = [];
-
+const API_BASE_URL = window.location.hostname === 'localhost' 
+    ? 'http://localhost:3000'  // Local development
+    : 'https://email-sync-system-intern-p1es.onrender.com';  // Production
         async function loadStatistics() {
             try {
-            const API_BASE_URL = window.location.hostname === 'localhost' 
-    ? 'http://localhost:3000'  // Local development
-    : 'https://your-backend-url.onrender.com';  // Production
+            
                 const response = await fetch(`${API_BASE_URL}/api/statistics`);
                 const data = await response.json();
                 
@@ -505,4 +505,5 @@
         });
     </script>
 </body>
+
 </html>
