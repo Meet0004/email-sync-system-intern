@@ -1,0 +1,22 @@
+[
+  {
+    "id": "product_context",
+    "text": "I am applying for a Backend Engineering position. If the lead is interested, share the meeting booking link: https://cal.com/example"
+  },
+  {
+    "id": "meeting_link",
+    "text": "For scheduling meetings, use this link: https://cal.com/example"
+  },
+  {
+    "id": "availability",
+    "text": "I am available for meetings and discussions. Please feel free to book a time slot that works for you."
+  },
+  {
+    "id": "interest_response",
+    "text": "Thank you for your interest! I would be happy to discuss this opportunity further."
+  },
+  {
+    "id": "interview_ready",
+    "text": "Thank you for considering my profile. I am available for interviews and technical discussions."
+  }
+]
