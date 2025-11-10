@@ -1,8 +1,0 @@
-{
-  "name": "email-sync-frontend",
-  "version": "1.0.0",
-  "scripts": {
-    "dev": "npx http-server public -p 8080",
-    "build": "echo 'No build needed for static HTML'"
-  }
-}
